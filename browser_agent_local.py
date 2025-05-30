@@ -31,7 +31,6 @@ KEY_MAPPING = {
 def validate_coordinates(x, y):
     return max(0, min(x, DISPLAY_WIDTH)), max(0, min(y, DISPLAY_HEIGHT))
 
-# --- 追加：リトライ＆デバッグ用ラッパー -----------------------------------
 def create_response_with_retry(client, **kwargs):
     last_resp = None
     for attempt in range(5):
@@ -56,8 +55,6 @@ def create_response_with_retry(client, **kwargs):
                 print("❌ デバッグ用ダンプを error_response_dump.json に保存しました")
                 raise
     raise RuntimeError("Responses API のリトライが上限に達しました。")
-
-# --- 以下は既存コードに少し手を加えたもの --------------------------------
 
 async def handle_action(page, action):
     action_type = action.type
