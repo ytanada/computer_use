@@ -33,22 +33,27 @@ MODEL=computer-use-preview
 DISPLAY_WIDTH=1920
 DISPLAY_HEIGHT=1200
 ITERATIONS=9
-
+```
 
 ### 2. Dockerコンテナでの実行
 # イメージのビルド
+```
 docker build -t browser-agent .
+```
 
 # コンテナの起動
+```
 docker run -it --rm \
   --net=host \
   -v $(pwd):/home/ubuntu/work \
   browser-agent
-
+```
 
 ### 3. 実行
 1) pythonコマンドでPlaywrightを起動します。
+```
 # python browser_agent_local.py
+```
 2) 起動後、ターミナルに表示されるプロンプトで操作内容（例："ChatGPTについて調べて"）を入力してください。画面操作後、スクリーンショットと操作結果が表示されます。
 
 
