@@ -2,6 +2,7 @@
 このプロジェクトは、Azure OpenAI の `computer-use-preview` モデルと Playwright を組み合わせて、スクリーンショットを元にブラウザ操作を行う Python エージェントの実装です。
 
 ## 📁 ディレクトリ構成
+```
 .
 ├── .chrome-profile/ # Chromeブラウザのユーザープロファイル（キャッシュ等）
 ├── .env # APIキーなどの環境変数設定ファイル（機密情報は除外推奨）
@@ -10,7 +11,7 @@
 ├── browser_agent_local.py # メインスクリプト（Playwright + Azure OpenAI連携）
 ├── requirements.txt # Python依存ライブラリ
 └── screenshots/ # 撮影されたスクリーンショットの保存先
-
+```
 
 
 ## 🚀 機能概要
