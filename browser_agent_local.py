@@ -6,7 +6,6 @@ import json
 from pathlib import Path
 from dotenv import load_dotenv
 from openai import AzureOpenAI, APIError, APIConnectionError
-from azure.identity import DefaultAzureCredential, get_bearer_token_provider
 from playwright.async_api import async_playwright, TimeoutError
 
 # --- Load environment variables ---
